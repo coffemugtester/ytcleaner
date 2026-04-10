@@ -1,10 +1,14 @@
 # YouTube Cleaner
 
-A minimalist Chrome extension that removes visual clutter from YouTube by hiding `ytd-rich-section-renderer` elements.
+A minimalist Chrome extension that removes visual clutter from YouTube.
 
 ## What it does
 
-Automatically removes distracting design elements from YouTube as you browse. Uses a MutationObserver to handle YouTube's single-page application architecture, so clutter stays gone even as you navigate between videos, playlists, and channels.
+Automatically removes distracting design elements from YouTube as you browse:
+- `ytd-rich-section-renderer` elements (homepage clutter)
+- Comment sections on video pages (`section-identifier="comment-item-section"`)
+
+Uses a MutationObserver to handle YouTube's single-page application architecture, so clutter stays gone even as you navigate between videos, playlists, and channels.
 
 ## Installation
 
@@ -19,11 +23,11 @@ Automatically removes distracting design elements from YouTube as you browse. Us
 Just browse YouTube normally. The extension runs automatically on all YouTube pages (`www.youtube.com`).
 
 To verify it's working:
-1. Open YouTube
-2. Open DevTools (F12 or Cmd+Option+I)
-3. Go to the Console tab
-4. Look for `[YouTube Cleaner] Loaded and monitoring for clutter elements`
-5. Check the Elements tab — `ytd-rich-section-renderer` elements should be removed from the DOM
+1. Open YouTube homepage — rich section elements should be gone
+2. Open a video page — comment section should be hidden
+3. Open DevTools (F12 or Cmd+Option+I)
+4. Go to the Console tab — look for `[YouTube Cleaner] Loaded and monitoring for clutter elements`
+5. Check the Elements tab — targeted elements should be removed from the DOM (not just hidden)
 
 ## Project structure
 

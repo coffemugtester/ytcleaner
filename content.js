@@ -1,7 +1,7 @@
-// YouTube Cleaner - Removes ytd-rich-section-renderer elements
+// YouTube Cleaner - Removes clutter elements from YouTube
 // Handles YouTube's SPA navigation with MutationObserver
 
-const TARGET_SELECTOR = 'ytd-rich-section-renderer';
+const TARGET_SELECTOR = 'ytd-rich-section-renderer, [section-identifier="comment-item-section"]';
 
 // Function to remove all matching elements
 function removeClutter() {

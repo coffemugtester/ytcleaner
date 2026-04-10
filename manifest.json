@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Cleaner",
+  "version": "1.0.0",
+  "description": "Removes visual clutter from YouTube by hiding ytd-rich-section-renderer elements",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
